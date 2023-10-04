@@ -5,7 +5,7 @@
 mkdir -p src
 mkdir -p dst
 
-current-date=$(date '+%Y-%m-%d')
+current_date=$(date '+%Y-%m-%d')
 
 function refresh_source () {
     NOW=$(date '+%s')
@@ -19,12 +19,12 @@ function refresh_source () {
 }
 
 refresh_source "JMdict_e_examp"
-./binaries/yomitan -language="english_extra" -title="JMdict" src/JMdict_e_examp dst/${current-date}_JMdict_english_with_examples.zip
+./binaries/yomitan -language="english_extra" -title="JMdict" src/JMdict_e_examp dst/${current_date}_JMdict_english_with_examples.zip
 
-./binaries/yomitan -format="forms"       -title="JMdict Forms"       src/JMdict dst/${current-date}_JMdict_forms.zip
+./binaries/yomitan -format="forms"       -title="JMdict Forms"       src/JMdict dst/${current_date}_JMdict_forms.zip
 
 refresh_source "JMnedict.xml"
-./binaries/yomitan src/JMnedict.xml dst/${current-date}_JMnedict.zip
+./binaries/yomitan src/JMnedict.xml dst/${current_date}_JMnedict.zip
 
 refresh_source "kanjidic2.xml"
-./binaries/yomitan -language="english"    -title="KANJIDIC"              src/kanjidic2.xml dst/${current-date}_KANJIDIC_english.zip
+./binaries/yomitan -language="english"    -title="KANJIDIC"              src/kanjidic2.xml dst/${current_date}_KANJIDIC_english.zip
