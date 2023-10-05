@@ -21,6 +21,7 @@ function refresh_source () {
 refresh_source "JMdict_e_examp"
 ./binaries/yomitan -language="english_extra" -title="JMdict" src/JMdict_e_examp dst/${current_date}_JMdict_english_with_examples.zip
 
+refresh_source "JMdict"
 ./binaries/yomitan -format="forms"       -title="JMdict Forms"       src/JMdict dst/${current_date}_JMdict_forms.zip
 
 refresh_source "JMnedict.xml"
