@@ -2,7 +2,7 @@ name: Build and Release Dictionaries
 
 on:
   schedule:
-    - cron: '28 3 * * *' # Should run at 03:30 UTC (which corresponds to the update of JMdict data files) every day
+    - cron: '25 3 * * *' # Should run at 03:30 UTC (which corresponds to the update of JMdict data files) every day
   workflow_dispatch: # Allows manually triggering the workflow
 
 jobs:
